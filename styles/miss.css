@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap');
+
+body {
+  font-family: 'Uncial Antiqua', cursive;
+  background-color: #0d0d0d;
+  color: #d4af37;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+#custom-wrapper {
+  width: 80%;
+  margin: auto;
+  background: linear-gradient(135deg, #1a1a1a 30%, #3b2f2f 100%);
+  padding: 20px;
+  box-shadow: 0px 0px 30px rgba(255, 215, 0, 0.8);
+  border: 3px solid #d4af37;
+  border-radius: 10px;
+  animation: fadeIn 1.5s ease-out;
+}
+
+#custom-header {
+  text-align: center;
+  background: #3b2f2f;
+  color: #d4af37;
+  padding: 20px 0;
+  font-family: 'Uncial Antiqua', cursive;
+  letter-spacing: 2px;
+  text-shadow: 0px 0px 15px gold;
+  border-bottom: 3px solid #d4af37;
+  transition: background 0.3s ease;
+}
+
+#custom-header:hover {
+  background: #5a4530;
+}
+
+.custom-h1 {
+  margin: 0;
+  font-size: 32px;
+  text-shadow: 0px 0px 15px gold, 0px 0px 30px rgba(255, 215, 0, 0.5);
+  animation: glow 2s infinite alternate, slideIn 2s ease-out;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0px 0px 15px gold;
+  }
+  to {
+    text-shadow: 0px 0px 30px gold;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.custom-p {
+  font-size: 18px;
+  color: #e0c97a;
+  line-height: 1.8;
+  font-style: italic;
+  text-shadow: 0px 0px 8px rgba(255, 215, 0, 0.5);
+  animation: fadeInText 2s ease-out;
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.custom-ul, .custom-ol {
+  margin: 20px 0;
+  padding-left: 25px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.custom-ul:hover, .custom-ol:hover {
+  transform: scale(1.05);
+}
+
+.custom-li {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #d4af37;
+  transition: transform 0.3s, text-shadow 0.3s ease;
+}
+
+.custom-li:hover {
+  transform: scale(1.1);
+  text-shadow: 0px 0px 15px gold, 0px 0px 20px rgba(255, 215, 0, 0.8);
+}
+
+.custom-h2 {
+  color: #ffd700;
+  font-size: 24px;
+  margin-top: 25px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 0px 0px 10px rgba(255, 215, 0, 0.8);
+  animation: bounce 1.5s ease-out infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.custom-hr {
+  border: 2px solid #d4af37;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(255, 215, 0, 0.7);
+  margin: 20px 0;
+}
+
+#custom-content {
+  padding: 20px;
+  background: #1a1a1a;
+  border-radius: 10px;
+  border: 2px solid #d4af37;
+  box-shadow: 0px 0px 15px rgba(255, 215, 0, 0.5);
+  transition: transform 0.3s ease-in-out;
+}
+
+#custom-content:hover {
+  transform: scale(1.02);
+}
+
+.custom-button {
+  background: #d4af37;
+  color: black;
+  padding: 12px 25px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 10px;
+  font-family: 'Uncial Antiqua', cursive;
+  text-transform: uppercase;
+  border-radius: 5px;
+  transition: 0.3s;
+  box-shadow: 0px 0px 10px gold;
+  animation: buttonHoverGlow 1s ease-out infinite alternate;
+}
+
+@keyframes buttonHoverGlow {
+  0% {
+    box-shadow: 0px 0px 10px gold;
+  }
+  100% {
+    box-shadow: 0px 0px 25px gold, 0px 0px 40px rgba(255, 215, 0, 0.8);
+  }
+}
+
+.custom-button:hover {
+  background: #ffdd44;
+  box-shadow: 0px 0px 20px gold, 0px 0px 30px rgba(255, 215, 0, 0.8);
+  transform: scale(1.1);
+  animation: none;
+}
+
+.custom-button:active {
+  background: #ffcc33;
+  box-shadow: 0px 0px 25px #ffd700, 0px 0px 35px rgba(255, 215, 0, 0.8);
+}
