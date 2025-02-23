@@ -6,9 +6,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Бюро по трудоустройству и профориентации</title>
+  <title>Отзывы о сказаниях Херсонеса</title>
   <link rel="stylesheet" type="text/css" href="styles/mains.css">
-  <link rel="stylesheet" type="text/css" href="styles/reviews1.css">
+  <link rel="stylesheet" type="text/css" href="styles/reviews2.css">
 </head>
 <body>
   <div id="wrapper">
@@ -18,14 +18,14 @@
       <table id="main">
         <tr>
           <td colspan="2" id="header">
-            <h1>Бюро по трудоустройству и профориентации</h1>
+            <h1>Отзывы о сказаниях Херсонеса</h1>
           </td>
         </tr>
         <tr>
           <td colspan="2"><hr /></td>
         </tr>
         <tr>
-          <td id="content" style="width: 100%;">
+          <td id="content" style="width: 100%;">            
 
             <!-- Контейнер с двумя колонками: форма слева, отзывы справа -->
             <div class="review-section">
@@ -94,26 +94,25 @@
   <script>
     // Функция для показа/скрытия скрытых отзывов с анимацией
     function toggleReviews() {
-    var hiddenReviewsContainer = document.querySelector('.hidden-reviews');
-    var hiddenReviews = document.querySelectorAll('.hidden-reviews .review');
-    var showMoreText = document.querySelector('.show-more');
+      var hiddenReviewsContainer = document.querySelector('.hidden-reviews');
+      var hiddenReviews = document.querySelectorAll('.hidden-reviews .review');
+      var showMoreText = document.querySelector('.show-more');
 
-    if (hiddenReviews.length === 0) return;
+      if (hiddenReviews.length === 0) return;
 
-    hiddenReviews.forEach(review => {
-        review.classList.toggle('visible');
-    });
+      hiddenReviews.forEach(review => {
+          review.classList.toggle('visible');
+      });
 
-    // Показываем или скрываем весь блок с отзывами
-    if (hiddenReviewsContainer.classList.contains("expanded")) {
-        hiddenReviewsContainer.classList.remove("expanded");
-        showMoreText.innerHTML = "Показать все отзывы";
-    } else {
-        hiddenReviewsContainer.classList.add("expanded");
-        showMoreText.innerHTML = "Скрыть отзывы";
+      // Показываем или скрываем весь блок с отзывами
+      if (hiddenReviewsContainer.classList.contains("expanded")) {
+          hiddenReviewsContainer.classList.remove("expanded");
+          showMoreText.innerHTML = "Показать все отзывы";
+      } else {
+          hiddenReviewsContainer.classList.add("expanded");
+          showMoreText.innerHTML = "Скрыть отзывы";
+      }
     }
-}
-  
   </script>
 </body>
 </html>

@@ -6,9 +6,18 @@ body {
     padding: 0;
     font-family: 'Georgia', serif;
     color: #e0d4c4; /* Светлый текст */
+    line-height: 1.6;
+    
+    /* Кастомный курсор в виде магической палочки */
+    cursor: url('https://www.pngrepo.com/png/18985/180/magic-wand-cursor.png'), auto;
 }
 
-/* --- Главный контейнер с магическим свечением --- */
+/* --- Курсор при наведении на элементы с активным курсором --- */
+a, button, .review-form input[type="submit"], .show-more {
+    cursor: url('https://www.pngrepo.com/png/18985/180/magic-wand-cursor.png'), pointer;
+}
+
+/* --- Основной контейнер для контента --- */
 #wrapper {
     background: rgba(26, 26, 26, 0.92);
     padding: 30px;
@@ -143,11 +152,6 @@ header, footer {
     color: #e0d4c4;
 }
 
-.review:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 6px 20px rgba(255, 140, 60, 0.7);
-}
-
 /* --- Мерцающий декоративный эффект --- */
 .decor-image {
     position: absolute;
@@ -179,4 +183,47 @@ header, footer {
 .show-more:hover {
     color: #ffcf71;
     text-shadow: 0px 0px 10px rgba(255, 200, 90, 0.9);
+}
+
+/* --- Подсветка имени пользователя в отзыве --- */
+.review-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ffae42; /* Светящийся оранжевый */
+    text-shadow: 0 0 10px rgba(255, 170, 70, 0.8), 0 0 20px rgba(255, 140, 60, 0.4);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* --- Эффект при наведении на имя пользователя --- */
+.review-name:hover {
+    transform: scale(1.1);
+    color: #ff6f00;
+    text-shadow: 0 0 15px rgba(255, 170, 70, 1), 0 0 25px rgba(255, 140, 60, 0.7);
+}
+
+/* --- Стиль для смайликов в комментариях --- */
+.review-text {
+    font-size: 1em;
+    color: #d4d4d4;
+    line-height: 1.6;
+}
+
+/* Если хотите выделить смайлики для особой стилизации */
+.review-text .emoji {
+    font-size: 1.5em;
+    margin: 0 5px;
+    transition: transform 0.3s ease;
+}
+
+.review-text .emoji:hover {
+    transform: scale(1.3);
+}
+
+/* --- Скрытые отзывы --- */
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
 }

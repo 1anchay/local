@@ -3,7 +3,7 @@
     <div class="footer-column">
       <h4>О нас</h4>
       <ul>
-        <li><a href="about.html">История проекта</a></li>
+        <li><a href="history.php">История проекта</a></li>
         <li><a href="comand.php">Наша команда</a></li>
         <li><a href="mission.php">Миссия и ценности</a></li>
       </ul>

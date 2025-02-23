@@ -88,21 +88,21 @@
                     <h2>Вступи в ряды хранителей истории! 📜✨</h2>
                     <!-- Добавил id для формы -->
                     <form id="registration-form" action="reg.php" method="POST" onsubmit="submitForm(event)">
-                        <input type="text" name="username" class="reg-input" placeholder="Имя героя 🏛️" required>
+                        <input type="text" name="username" class="reg-input" placeholder="Имя 🏛️" required>
                         <input type="email" name="email" class="reg-input" placeholder="Пергамент для связи 📜" required>
                         <input type="password" name="password" class="reg-input" placeholder="Тайный ключ 🔑" required>
                         <input type="password" name="confirm_password" class="reg-input" placeholder="Повтори ключ 🔄" required>
-                        <button type="submit" class="reg-btn">Войти в Легенду! ⚡</button> <!-- Теперь форма отправляется через JS -->
+                        <button type="submit" class="reg-btn">Войти! ⚡</button> <!-- Теперь форма отправляется через JS -->
                     </form>
                     <div class="reg-links">
-                        <p>Уже среди нас? <a href="index1.php">Войти в хроники 📖</a></p>
+                        <p>Уже среди нас? <a href="index1.php">Войти 📖</a></p>
                     </div>
                     
                     <!-- Свиток, который будет раскрывать информацию -->
                     <div id="scroll-content">
                         <div class="scroll-content-inner">
                             <h3>Поздравляем! Ты успешно зарегистрирован.</h3>
-                            <p>Теперь ты можешь войти и начать путешествие в великое наследие!</p>
+                            <p>Теперь ты можешь войти и начать путешествие!</p>
                         </div>
                     </div>
                 </div>
