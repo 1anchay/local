@@ -7,7 +7,7 @@
     <title>Регистрация - Наследие Херсонеса ⚔️🏺</title>
     
     <!-- Подключение CSS -->
-    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="styles/mains.css">
     <link rel="stylesheet" type="text/css" href="styles/regi.css">
     <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
 

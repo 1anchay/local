@@ -1,22 +1,22 @@
-.article ul {
-  list-style-type: none;
+/* --- Основные стили --- */
+body {
+  background: url('https://vskmo.ru/wp-content/uploads/2021/12/Presentation-213.jpg') no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
   padding: 0;
+  font-family: 'Georgia', serif;
+  color: #e0d4c4; /* Светлый текст */
 }
 
-.article ul li {
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  margin-bottom: 10px;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-.article ul li strong {
-  color: #333;
-  font-size: 18px;
-}
-
-.article ul li em {
-  color: #777;
-  font-style: italic;
+/* --- Главный контейнер с магическим свечением --- */
+#wrapper {
+  background: rgba(26, 26, 26, 0.92);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(255, 140, 60, 0.7); /* Медное свечение */
+  width: 85%;
+  max-width: 1300px;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
 }

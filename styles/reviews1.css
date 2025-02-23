@@ -1,0 +1,182 @@
+/* --- Основные стили --- */
+body {
+    background: url('https://vskmo.ru/wp-content/uploads/2021/12/Presentation-213.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-family: 'Georgia', serif;
+    color: #e0d4c4; /* Светлый текст */
+}
+
+/* --- Главный контейнер с магическим свечением --- */
+#wrapper {
+    background: rgba(26, 26, 26, 0.92);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(255, 140, 60, 0.7); /* Медное свечение */
+    width: 85%;
+    max-width: 1300px;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* --- Эффект мягкого сияния вокруг блока --- */
+#wrapper::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 20px;
+    background: radial-gradient(circle, rgba(201, 124, 55, 0.4), transparent);
+    z-index: -1;
+    filter: blur(15px);
+}
+
+/* --- Хедер и футер --- */
+header, footer {
+    background: rgba(30, 30, 30, 0.95);
+    padding: 20px;
+    text-align: center;
+    color: #ffae42; /* Светящийся оранжевый */
+    font-size: 22px;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(255, 140, 60, 0.6);
+    text-shadow: 0 0 10px rgba(255, 150, 50, 0.7);
+}
+
+/* --- Раздел отзывов --- */
+.review-section {
+    width: 100%;
+    max-width: 1300px;
+    margin: 25px auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 35px;
+    position: relative;
+}
+
+/* --- Форма добавления отзыва --- */
+.review-form {
+    background: rgba(46, 46, 46, 0.9);
+    border: 3px solid #ff9d00; /* Яркий магический оранжевый */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: inset 0 0 20px rgba(255, 140, 60, 0.5);
+    flex: 0 0 48%;
+    font-size: 18px;
+    color: #e0d4c4;
+}
+
+/* --- Заголовок формы с эффектом мерцания --- */
+.review-form h2 {
+    font-family: 'Georgia', serif;
+    color: #ffae42;
+    text-shadow: 0 0 12px rgba(255, 170, 70, 0.8), 0 0 20px rgba(255, 140, 60, 0.4);
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    0% { text-shadow: 0 0 12px rgba(255, 170, 70, 0.8); }
+    100% { text-shadow: 0 0 20px rgba(255, 140, 60, 1); }
+}
+
+/* --- Поля ввода в форме --- */
+.review-form input, .review-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: 2px solid #ff9d00;
+    border-radius: 10px;
+    font-size: 16px;
+    background: rgba(30, 30, 30, 0.85);
+    color: #d4d4d4;
+    box-shadow: 0 0 10px rgba(255, 140, 60, 0.3);
+}
+
+/* --- Кнопка отправки формы с анимацией свечения --- */
+.review-form input[type="submit"] {
+    background: linear-gradient(45deg, #ff9d00, #ff6f00);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 15px rgba(255, 120, 30, 0.6);
+}
+
+.review-form input[type="submit"]:hover {
+    background: linear-gradient(45deg, #ffae42, #ff9d00);
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255, 140, 60, 0.8);
+}
+
+/* --- Колонка отзывов с эффектом мерцания --- */
+.reviews-column {
+    background: rgba(46, 46, 46, 0.95);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: inset 0 0 15px rgba(201, 124, 55, 0.6);
+    flex: 0 0 48%;
+    max-height: 600px;
+    overflow-y: auto;
+    border: 3px solid #ff9d00;
+}
+
+/* --- Отзывы с мягким свечением --- */
+.review {
+    background: rgba(30, 30, 30, 0.95);
+    border: 3px solid #ff9d00;
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 1.1em;
+    font-family: 'Georgia', serif;
+    margin-bottom: 15px;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(255, 140, 60, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #e0d4c4;
+}
+
+.review:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 20px rgba(255, 140, 60, 0.7);
+}
+
+/* --- Мерцающий декоративный эффект --- */
+.decor-image {
+    position: absolute;
+    top: 50%;
+    width: 90px;
+    height: auto;
+    opacity: 0.75;
+    transform: translateY(-50%);
+    animation: flicker 2.5s infinite alternate;
+}
+
+@keyframes flicker {
+    0% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+/* --- Кнопка "Показать больше" --- */
+.show-more {
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+    color: #ffae42;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    font-size: 18px;
+}
+
+.show-more:hover {
+    color: #ffcf71;
+    text-shadow: 0px 0px 10px rgba(255, 200, 90, 0.9);
+}

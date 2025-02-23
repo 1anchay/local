@@ -7,8 +7,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Бюро по трудоустройству и профориентации</title>
-  <link rel="stylesheet" type="text/css" href="styles/main.css">
-  <link rel="stylesheet" type="text/css" href="styles/reviews.css">
+  <link rel="stylesheet" type="text/css" href="styles/mains.css">
+  <link rel="stylesheet" type="text/css" href="styles/reviews1.css">
 </head>
 <body>
   <div id="wrapper">
@@ -26,9 +26,6 @@
         </tr>
         <tr>
           <td id="content" style="width: 100%;">
-            <!-- Векторные изображения по бокам -->
-            <img src="/images/left.jpg" alt="Украшение слева" class="decor-image left">
-            <img src="/images/left.jpg" alt="Украшение справа" class="decor-image right">
 
             <!-- Контейнер с двумя колонками: форма слева, отзывы справа -->
             <div class="review-section">
@@ -97,19 +94,26 @@
   <script>
     // Функция для показа/скрытия скрытых отзывов с анимацией
     function toggleReviews() {
-      var hiddenReviews = document.querySelectorAll('.hidden-reviews .review');
-      var showMoreText = document.querySelector('.show-more');
+    var hiddenReviewsContainer = document.querySelector('.hidden-reviews');
+    var hiddenReviews = document.querySelectorAll('.hidden-reviews .review');
+    var showMoreText = document.querySelector('.show-more');
 
-      hiddenReviews.forEach(review => {
+    if (hiddenReviews.length === 0) return;
+
+    hiddenReviews.forEach(review => {
         review.classList.toggle('visible');
-      });
+    });
 
-      if (hiddenReviews[0].classList.contains("visible")) {
-        showMoreText.innerHTML = "Скрыть отзывы";
-      } else {
+    // Показываем или скрываем весь блок с отзывами
+    if (hiddenReviewsContainer.classList.contains("expanded")) {
+        hiddenReviewsContainer.classList.remove("expanded");
         showMoreText.innerHTML = "Показать все отзывы";
-      }
+    } else {
+        hiddenReviewsContainer.classList.add("expanded");
+        showMoreText.innerHTML = "Скрыть отзывы";
     }
+}
+  
   </script>
 </body>
 </html>

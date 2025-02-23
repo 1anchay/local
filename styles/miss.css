@@ -1,12 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap');
-
+/* --- Основные стили --- */
 body {
-  font-family: 'Uncial Antiqua', cursive;
-  background-color: #0d0d0d;
-  color: #d4af37;
+  background: url('https://vskmo.ru/wp-content/uploads/2021/12/Presentation-213.jpg') no-repeat center center fixed;
+  background-size: cover;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  font-family: 'Georgia', serif;
+  color: #e0d4c4; /* Светлый текст */
+}
+
+/* --- Главный контейнер с магическим свечением --- */
+#wrapper {
+  background: rgba(26, 26, 26, 0.92);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(255, 140, 60, 0.7); /* Медное свечение */
+  width: 85%;
+  max-width: 1300px;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
 }
 
 #custom-wrapper {
