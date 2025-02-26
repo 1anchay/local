@@ -1,0 +1,121 @@
+/* === Общий стиль футера === */
+#main-footer {
+    background: linear-gradient(135deg, #131324, #1e1e2e);
+    color: #d0d0d0;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 -5px 15px rgba(0, 255, 255, 0.3);
+    border-top: 2px solid rgba(0, 255, 255, 0.6);
+}
+
+/* === Контейнер колонок === */
+.footer-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* === Колонки футера === */
+.footer-column {
+    flex: 1;
+    min-width: 220px;
+    text-align: left;
+}
+
+/* === Заголовки колонок === */
+.footer-column h4 {
+    color: #0ff;
+    margin-bottom: 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+/* === Ссылки === */
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin: 8px 0;
+}
+
+.footer-column ul li a {
+    color: #d0d0d0;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-column ul li a:hover {
+    color: #ff0077;
+    text-shadow: 0 0 8px rgba(255, 0, 153, 0.7);
+}
+
+/* === Контактная информация === */
+.footer-column p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #d0d0d0;
+}
+
+/* === Нижняя часть футера === */
+.footer-bottom {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 255, 255, 0.3);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* === Текст копирайта === */
+.footer-bottom p {
+    font-size: 14px;
+    color: #a0a0a0;
+}
+
+/* === Соц. сети === */
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+    transform: scale(1.1);
+}
+
+/* === Иконки соц. сетей === */
+.social-links img {
+    width: 32px;
+    height: 32px;
+    filter: drop-shadow(0px 0px 6px rgba(0, 255, 255, 0.6));
+}
+
+/* === Адаптивность === */
+@media screen and (max-width: 768px) {
+    .footer-columns {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-column {
+        text-align: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}

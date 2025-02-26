@@ -48,49 +48,45 @@ function initParticles() {
     });
 }
 
-// Смена темы (темная/светлая)
+// Функция переключения темы (темная/светлая)
 function toggleTheme() {
-    // Переключаем классы на body
-    document.body.classList.toggle('light-theme');
-    document.body.classList.toggle('dark-theme');
+    const body = document.body;
+    const themeIcon = document.getElementById("theme-icon");
 
-    // Меняем иконки
-    let themeIcon = document.getElementById('theme-icon');
-    if (document.body.classList.contains('light-theme')) {
-        themeIcon.classList.remove('fa-sun');
-        themeIcon.classList.add('fa-moon');
+    // Переключаем классы
+    body.classList.toggle("light-theme");
+    body.classList.toggle("dark-theme");
+
+    // Проверяем, какая тема сейчас активна, и сохраняем её
+    if (body.classList.contains("light-theme")) {
+        localStorage.setItem("theme", "light");
+        themeIcon.classList.replace("fa-sun", "fa-moon");
     } else {
-        themeIcon.classList.remove('fa-moon');
-        themeIcon.classList.add('fa-sun');
+        localStorage.setItem("theme", "dark");
+        themeIcon.classList.replace("fa-moon", "fa-sun");
     }
 }
 
-// Подключаем обработчик события для кнопки смены темы
+// При загрузке страницы проверяем, какая тема сохранена
 document.addEventListener("DOMContentLoaded", function () {
     const themeToggle = document.getElementById("theme-toggle");
+    const themeIcon = document.getElementById("theme-icon");
     const body = document.body;
 
-    // Проверяем, сохранена ли тема в localStorage
-    if (localStorage.getItem("theme") === "light") {
-        body.classList.add("light-theme");
-        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+    // Устанавливаем тему из localStorage
+    const savedTheme = localStorage.getItem("theme") || "dark";
+    body.classList.add(savedTheme);
+    
+    // Устанавливаем правильную иконку
+    if (savedTheme === "light") {
+        themeIcon.classList.replace("fa-sun", "fa-moon");
     } else {
-        body.classList.add("dark-theme");
-        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        themeIcon.classList.replace("fa-moon", "fa-sun");
     }
 
-    // Переключение темы при клике
-    themeToggle.addEventListener("click", function () {
-        if (body.classList.contains("light-theme")) {
-            body.classList.remove("light-theme");
-            body.classList.add("dark-theme");
-            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-            localStorage.setItem("theme", "dark");
-        } else {
-            body.classList.remove("dark-theme");
-            body.classList.add("light-theme");
-            themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-            localStorage.setItem("theme", "light");
-        }
-    });
+    // Обработчик клика для смены темы
+    themeToggle.addEventListener("click", toggleTheme);
 });
+
+// Инициализируем частицы
+initParticles();

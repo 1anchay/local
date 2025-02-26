@@ -3,42 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ваш сайт</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>EdTech Платформа</title>
+    <link rel="stylesheet" href="top1.css">
+    <script src="sun.js" defer></script>
 </head>
 <body>
 
   <!-- Хедер -->
   <header id="header">
-    <div class="logo">
-      <img src="images/logo3.png" alt="Логотип Бюро" class="header-logo">
-    </div>
-    <nav>
-      <ul>
-        <li><a href="index1.php">Главная</a></li>
-        <li><a href="article.php">Маршруты</a></li>
-        <li><a href="guestbook.php">Отзывы</a></li>
-        <li><a href="reg.php">Регистрация</a></li>
-      </ul>
-    </nav>
-    <div class="auth-container">
-      <?php
-      session_start();  // Убедитесь, что сессия начата
+    <div class="header-container">
+      <!-- Логотип -->
+      <div class="logo">
+        <img src="images/logo3.png" alt="Логотип EdTech" class="header-logo">
+      </div>
 
-      // Проверяем, если пользователь уже авторизован
-      if (isset($_SESSION["email"]) && isset($_SESSION["password"]) && checkUser($_SESSION["email"], $_SESSION["password"])) {
-          // Если пользователь авторизован, показываем панель пользователя
-          require_once "blocks/user_panel.php";  // Показ панель пользователя
-      } else {
-          // Если не авторизован, показываем форму авторизации
-          ?>
-          <form action="auth.php" name="auth" method="post">
-            <input type="text" name="email" placeholder="E-mail" required />
-            <input type="password" name="password" placeholder="Пароль" required />
-            <input type="submit" name="button_auth" value="Войти" />
-          </form>
-          <?php
-      }
-      ?>
+      <!-- Навигация -->
+      <nav>
+        <ul>
+          <li><a href="index1.php">Главная</a></li>
+          <li><a href="article.php">Курсы</a></li>
+          <li><a href="guestbook.php">Сообщество</a></li>
+          <li><a href="reg.php">Регистрация</a></li>
+        </ul>
+      </nav>
+
+      <!-- Блок авторизации + кнопка темы -->
+      <div class="auth-theme-container">
+        <?php
+        session_start(); 
+
+        if (isset($_SESSION["email"]) && isset($_SESSION["password"]) && checkUser($_SESSION["email"], $_SESSION["password"])) {
+            require_once "blocks/user_panel.php";  
+        } else {
+        ?>
+            <form action="auth.php" name="auth" method="post" class="auth-form">
+                <input type="text" name="email" placeholder="E-mail" required />
+                <input type="password" name="password" placeholder="Пароль" required />
+                <button type="submit" name="button_auth" class="btn-auth">Войти</button>
+            </form>
+        <?php
+        }
+        ?>
+
+        <!-- Кнопка переключения темы -->
+        <button id="theme-toggle" class="theme-btn">
+            <svg id="theme-icon" width="32" height="32" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="5" fill="yellow"></circle> <!-- Солнце -->
+            </svg>
+        </button>
+      </div>
     </div>
+
+    <!-- Декоративные линии -->
+    <div class="header-line"></div>
+    <div class="header-glow"></div>
   </header>
+
+</body>
+</html>
