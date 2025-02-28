@@ -1,0 +1,133 @@
+/* === Общий стиль хедера === */
+#header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1a1a2e, #0f0f1e);
+    padding: 15px 30px;
+    min-height: 70px;
+    box-shadow: 0 6px 15px rgba(0, 255, 255, 0.4);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 3px solid rgba(0, 255, 255, 0.7);
+}
+
+/* === Логотип (по центру) === */
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.header-logo {
+    height: 50px;
+    filter: drop-shadow(0px 0px 6px rgba(0, 255, 255, 0.7));
+    transition: transform 0.4s ease-in-out;
+}
+
+.header-logo:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* === Декоративные линии === */
+#header::before,
+#header::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.6), transparent);
+    left: 0;
+    z-index: -1;
+}
+
+#header::before {
+    top: 0;
+}
+
+#header::after {
+    bottom: 0;
+}
+
+/* === Навигация (по центру) === */
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 10px auto;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: #d0d0d0;
+    padding: 8px 16px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* === Эффект линии при наведении === */
+nav ul li a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #ff0077;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out;
+    border-radius: 2px;
+}
+
+nav ul li a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 8px rgba(255, 0, 153, 0.8);
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* === Кнопка переключения темы === */
+.theme-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+}
+
+.theme-btn:hover {
+    transform: scale(1.15);
+    background: rgba(0, 255, 255, 0.2);
+}
+
+#theme-toggle {
+    z-index: 10;
+    position: relative;
+    background: transparent;
+    border: none;
+    padding: 6px;
+    border-radius: 50%;
+}

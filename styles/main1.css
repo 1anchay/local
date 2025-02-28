@@ -1,10 +1,11 @@
 /* Общие стили */
 body {
     font-family: 'Inter', Arial, sans-serif;
-    background-color: #f4f7fc;
+    background-color: #eef2f7;
     margin: 0;
     padding: 0;
     color: #333;
+    line-height: 1.6;
 }
 
 .container {
@@ -14,17 +15,19 @@ body {
 }
 
 h1 {
-    font-size: 30px;
-    color: #2c3e50;
+    font-size: 32px;
+    color: #1e3a8a;
     text-align: center;
     margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 /* Навигация */
 header {
-    background: #1e3a8a;
+    background: linear-gradient(135deg, #1e3a8a, #162d6a);
     padding: 15px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 nav ul {
@@ -32,45 +35,53 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 25px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: white;
     font-weight: bold;
+    font-size: 16px;
     transition: 0.3s;
+    padding: 10px 15px;
+    border-radius: 5px;
 }
 
 nav ul li a:hover {
-    color: #ffdd57;
+    background: #ffdd57;
+    color: #1e3a8a;
+    box-shadow: 0 3px 10px rgba(255, 221, 87, 0.5);
 }
 
 /* Фильтры */
 .filters {
-    background: #fff;
+    background: white;
     padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
     margin-bottom: 20px;
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
 }
 
 .filter-btn {
     background: #e0e0e0;
     border: none;
-    padding: 12px 18px;
-    border-radius: 20px;
+    padding: 12px 20px;
+    border-radius: 25px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 15px;
+    font-weight: bold;
     transition: 0.3s;
 }
 
 .filter-btn.active {
     background: #1e3a8a;
     color: white;
+    box-shadow: 0 3px 10px rgba(30, 58, 138, 0.5);
 }
 
 /* Карточки курсов */
@@ -81,22 +92,24 @@ nav ul li a:hover {
 }
 
 .course-card {
-    background: #fff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     transition: 0.3s;
     text-align: center;
+    position: relative;
 }
 
 .course-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-7px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 .course-card h2 {
-    font-size: 20px;
+    font-size: 22px;
     color: #1e3a8a;
+    margin-bottom: 10px;
 }
 
 .course-card p {
@@ -105,30 +118,32 @@ nav ul li a:hover {
 }
 
 .course-card img {
-    width: 120px;
-    height: 120px;
+    width: 130px;
+    height: 130px;
     object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 10px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Тэг популярности */
 .popular .tag {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 12px;
+    left: 12px;
     background: #ffdd57;
-    padding: 5px 12px;
-    font-size: 12px;
+    padding: 6px 14px;
+    font-size: 13px;
     font-weight: bold;
-    border-radius: 5px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(255, 221, 87, 0.5);
 }
 
 /* Футер */
 footer {
-    background: #1e3a8a;
+    background: linear-gradient(135deg, #1e3a8a, #162d6a);
     color: white;
-    padding: 30px 0;
+    padding: 40px 0;
     margin-top: 30px;
 }
 
@@ -136,19 +151,19 @@ footer {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 25px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .footer-column {
     flex: 1;
-    min-width: 200px;
+    min-width: 220px;
 }
 
 .footer-column h4 {
     font-size: 18px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .footer-column ul {
@@ -157,7 +172,7 @@ footer {
 }
 
 .footer-column ul li {
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
 .footer-column ul li a {
@@ -168,6 +183,7 @@ footer {
 
 .footer-column ul li a:hover {
     color: #ffdd57;
+    text-decoration: underline;
 }
 
 .footer-bottom {
@@ -179,17 +195,17 @@ footer {
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .social-links img {
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     transition: 0.3s;
 }
 
 .social-links img:hover {
-    transform: scale(1.1);
+    transform: scale(1.15);
 }
 
 /* Адаптивность */

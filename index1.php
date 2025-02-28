@@ -7,10 +7,11 @@
   <title>Онлайн-курсы и IT-обучение</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="styles/top1.css">
-  <link rel="stylesheet" type="text/css" href="styles/main12.css">
+  <link rel="stylesheet" type="text/css" href="styles/top.css">
+  <link rel="stylesheet" type="text/css" href="styles/main1.css">
   <link rel="stylesheet" type="text/css" href="styles/style.css">
   <link rel="stylesheet" type="text/css" href="styles/footer.css">
+  <link rel="stylesheet" type="text/css" href="styles/filter.css">
   <script src="script.js" defer></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>

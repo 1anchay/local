@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.articles-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 20px;
+  background: #0d0d0d;
+  border-radius: 10px;
+}
+
+.article {
+  background: rgba(20, 20, 20, 0.9);
+  border: 1px solid #ff00ff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.6);
+  padding: 16px;
+  width: calc(33.333% - 15px);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  font-family: 'Press Start 2P', cursive;
+  color: #00ffff;
+  text-transform: uppercase;
+}
+
+.article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+}
+
+.article h2 {
+  font-size: 18px;
+  color: #ff00ff;
+  margin-bottom: 12px;
+  text-shadow: 0 0 5px rgba(255, 0, 255, 0.7);
+}
+
+.article p {
+  font-size: 16px;
+  color: #00ffff;
+  line-height: 1.6;
+}
+
+.article .tags {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #ffcc00;
+  font-weight: bold;
+}
+
+.article a {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 14px;
+  background: #ff00ff;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background 0.3s ease-in-out;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.8);
+}
+
+.article a:hover {
+  background: #ffcc00;
+  box-shadow: 0 0 15px rgba(255, 204, 0, 0.9);
+}

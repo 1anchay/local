@@ -7,8 +7,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Отзывы о сказаниях Херсонеса</title>
-  <link rel="stylesheet" type="text/css" href="styles/mains.css">
-  <link rel="stylesheet" type="text/css" href="styles/reviews2.css">
+  <link rel="stylesheet" type="text/css" href="styles/main1.css">
+  <link rel="stylesheet" type="text/css" href="styles/top.css">
+  <link rel="stylesheet" type="text/css" href="styles/guest.css">
 </head>
 <body>
   <div id="wrapper">

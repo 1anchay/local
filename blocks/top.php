@@ -14,7 +14,7 @@
     <div class="header-container">
       <!-- Логотип -->
       <div class="logo">
-        <img src="images/logo3.png" alt="Логотип EdTech" class="header-logo">
+        <img src="images/logotyp.jpg" alt="Логотип EdTech" class="header-logo">
       </div>
 
       <!-- Навигация -->
@@ -27,7 +27,7 @@
         </ul>
       </nav>
 
-      <!-- Блок авторизации + кнопка темы -->
+      <!-- Блок авторизации -->
       <div class="auth-theme-container">
         <?php
         session_start(); 
@@ -45,12 +45,8 @@
         }
         ?>
 
-        <!-- Кнопка переключения темы -->
-        <button id="theme-toggle" class="theme-btn">
-            <svg id="theme-icon" width="32" height="32" viewBox="0 0 24 24">
-                <circle cx="12" cy="12" r="5" fill="yellow"></circle> <!-- Солнце -->
-            </svg>
-        </button>
+        <!-- Кнопка переключения темы (без иконки солнца) -->
+        <button id="theme-toggle" class="theme-btn"></button>
       </div>
     </div>
 
